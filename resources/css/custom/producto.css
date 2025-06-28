@@ -1,0 +1,140 @@
+/* ───────────────────────────────────────────────────
+   Botón “Nuevo” estilo Scriptcase
+   ─────────────────────────────────────────────────── */
+   .btn-nuevo{
+    display:inline-flex;
+    align-items:center;
+    gap:.25rem;
+    background:#05c38f;          /* verde brillante */
+    color:#fff;
+    padding:.45rem 1.1rem;
+    font-weight:600;
+    border-radius:1rem;
+    border:1px solid #03a878;
+}
+.btn-nuevo:hover{ background:#04ad7c; color:#fff; }
+
+/* ───────────────────────────────────────────────────
+   Botones de acción en cada fila
+   ─────────────────────────────────────────────────── */
+.btn-accion{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:26px;
+    height:26px;
+    font-size:.65rem;
+    color:#fff;
+    border-radius:50%;
+}
+
+.btn-ver     { background:#1cc88a; }  /* verde */
+.btn-editar  { background:#4e73df; }  /* azul  */
+.btn-eliminar{ background:#e74a3b; }  /* rojo  */
+
+.btn-accion:hover{ opacity:.85; color:#fff; }
+
+
+/* Dimensiones y fuente general */
+#products-table {
+  font-size: .75rem;       /* texto compacto */
+  border: 1px solid #c6c6df;
+}
+
+/* Cabecera ─ gris lavanda sutil */
+#products-table thead th {
+  background: #f1f1fb;
+  border-bottom: 1px solid #b0b0d6;
+  padding: .45rem .55rem;
+  vertical-align: middle;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Anchuras para columnas mini (Id, flags, icono lápiz)  */
+#products-table th:nth-child(1),
+#products-table td:nth-child(1),
+#products-table th:nth-child(2),
+#products-table td:nth-child(2),
+#products-table th:nth-last-child(-n+4),
+#products-table td:nth-last-child(-n+4) {
+  text-align: center;
+  width: 55px;
+}
+
+/* Cebra (lavanda muy claro) y hover */
+#products-table tbody tr:nth-child(odd)  { background:#fafaff; }
+#products-table tbody tr:nth-child(even) { background:#eef0ff; }
+#products-table tbody tr:hover           { background:#d9dfff; }
+
+/* Bordes internos finos en celdas */
+#products-table thead th,
+#products-table tbody td {
+  border-right: 1px solid #d6d6ea;
+}
+#products-table thead th:last-child,
+#products-table tbody td:last-child {
+  border-right: none;
+}
+
+/* Estado “ABIERTO / CERRADO” como etiqueta */
+.badge-estado {
+  font-weight: 600;
+  padding: .25rem .4rem;
+  border-radius: .2rem;
+}
+.badge-abierto  { background:#c7ffd4; color:#146c22; }
+.badge-cerrado  { background:#ffd8d8; color:#8c2626; }
+
+/* Botones de la toolbar DataTables (Exportar, Agrupar, pageLength…) */
+.dataTables_wrapper .dt-buttons .btn {
+  font-size: .7rem;
+  padding: .35rem .55rem;
+  background: #f5f5ff;
+  border: 1px solid #cfcfed;
+  color: #0d6efd;                        /* azul Bootstrap */
+}
+.dataTables_wrapper .dt-buttons .btn:hover {
+  background:#e7e7ff;
+}
+
+/* Selector “Ver 13” & buscador */
+.dataTables_length select {
+  font-size: .7rem;
+  padding: .25rem .4rem;
+  border: 1px solid #bdbde3;
+}
+.dataTables_filter input {
+  font-size: .7rem;
+  padding: .25rem .45rem;
+  border: 1px solid #bdbde3;
+}
+
+/* Paginación */
+.dataTables_paginate .pagination {
+  margin-top: .25rem;
+}
+.dataTables_paginate .page-link {
+  padding: .25rem .55rem;
+  font-size: .7rem;
+}
+.dataTables_paginate .page-item.active .page-link {
+  background:#e8e8ff;
+  border-color:#b0b0d6;
+  color:#000;
+}
+
+/* Íconos de ordenar (Bootstrap Icons opcionales) */
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+  background-position: right .6rem center;
+}
+
+/* Quitamos sombreado seleccion DataTables para que no rompa el cebra */
+table.dataTable tbody tr.selected,
+table.dataTable tbody th.selected,
+table.dataTable tbody td.selected {
+  background:#ccd5ff !important;
+}
